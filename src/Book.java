@@ -10,7 +10,7 @@ public class Book {
 
         while (true) {
 
-            System.out.println("Menu: " + "\n 1 - Add contact " + "\n 2 - Add contact by index" + "\n 3 - Show all" + "\n 4 - delete contact" + "\n 5 - Exit");
+            System.out.println("Menu: " + "\n 1 - Add contact " + "\n 2 - Add contact by index" + "\n 3 - Show all(standart)" +"\n 4 - Show all(A...Z)" + "\n 5 - delete contact" + "\n 6 - Exit");
             System.out.println("Contacts value: " + newContactList.getContactCount());
             System.out.println("Array length: " + newContactList.size());
             System.out.print("Choise option: ");
@@ -18,7 +18,7 @@ public class Book {
             int option = sc.nextInt();
 
 
-            if (option == 9){
+            if (option == 4){
                 newContactList.showContacts();
             } else
 
@@ -37,7 +37,7 @@ public class Book {
                     } else break;
                 }
 
-            } else if (option == 4) {
+            } else if (option == 5) {
                 System.out.print("Delete contact number: ");
                 int removeTemp = sc.nextInt();
                 newContactList.remove(removeTemp);
