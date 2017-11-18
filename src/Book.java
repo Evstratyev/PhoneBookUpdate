@@ -11,12 +11,16 @@ public class Book {
         while (true) {
 
             System.out.println("Menu: " + "\n 1 - Add contact " + "\n 2 - Add contact by index" + "\n 3 - Show all" + "\n 4 - delete contact" + "\n 5 - Exit");
-            System.out.println("Contacts value: " + newContactList.contactCount);
+            System.out.println("Contacts value: " + newContactList.getContactCount());
             System.out.println("Array length: " + newContactList.size());
             System.out.print("Choise option: ");
             Scanner sc = new Scanner(System.in);
             int option = sc.nextInt();
 
+
+            if (option == 9){
+                newContactList.showContacts();
+            } else
 
             if (option == 1) {
                 newContactList.add(recordContact());
