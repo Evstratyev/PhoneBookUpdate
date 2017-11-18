@@ -10,7 +10,7 @@ public class Book {
 
         while (true) {
 
-            System.out.println("Menu: " + "\n 1 - Add contact " + "\n 2 - Add contact by index" + "\n 3 - Show all(standart)" +"\n 4 - Show all(A...Z)" + "\n 5 - delete contact" + "\n 6 - Exit");
+            System.out.println("Menu: " + "\n 1 - Add contact " + "\n 2 - Add contact by index" + "\n 3 - Show all(standart)" +"\n 4 - Show all(A...Z)" + "\n 5 - delete contact" + "\n 6 - Exit ");
             System.out.println("Contacts value: " + newContactList.getContactCount());
             System.out.println("Array length: " + newContactList.size());
             System.out.print("Choise option: ");
