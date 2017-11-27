@@ -94,8 +94,5 @@ public class ContactList {
                 }
             }
         }
-        for (int i = 0; i < temp.length; i++) {
-            System.out.println(contacts[i]);
-        }
     }
 }

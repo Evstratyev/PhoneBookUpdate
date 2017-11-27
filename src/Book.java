@@ -20,6 +20,9 @@ public class Book {
 
             if (option == 4){
                 newContactList.showContacts();
+                for (int i = 0; i < newContactList.size(); i++){
+                    System.out.println(newContactList.get(i));
+                }
             } else
 
             if (option == 1) {
