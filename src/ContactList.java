@@ -87,10 +87,9 @@ public class ContactList {
 
                 if (get(i).getName().charAt(0) > get(i + 1).getName().charAt(0)) {
 
-                    Contact[] buf = new Contact[1];
-                    buf[0] = contacts[i];
+                    Contact buf = contacts[i];
                     contacts[i] = contacts[i+1];
-                    contacts[i+1] = buf[0];
+                    contacts[i+1] = buf;
                 }
             }
         }
