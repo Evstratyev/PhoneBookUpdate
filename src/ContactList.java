@@ -23,6 +23,7 @@ public class ContactList {
         } else {
             contacts[contactCount - 1] = contact;
         }
+        sortContacts();
     }
 
     public void addIndex(int index, Contact contact) {
@@ -42,7 +43,7 @@ public class ContactList {
         }
     }
 
-    public void trimToSize() {
+    private void trimToSize() {
         float a = (float) (contactCount - 1) / contacts.length;
         if (a < 0.67 && contactCount != 0) {
             Contact[] temp = new Contact[contacts.length + 1 - contacts.length / contactCount];
@@ -50,7 +51,7 @@ public class ContactList {
         }
     }
 
-    public void increaseArraySize() {
+    private void increaseArraySize() {
         if (contactCount > contacts.length) {
             int newLength = contacts.length * 3 / 2 + 1;
             Contact[] temp = new Contact[newLength];
@@ -70,15 +71,15 @@ public class ContactList {
         }
     }
 
-    public int size() {
+    public int getSize() {
         return contacts.length;
-    }
+    } // используется чтоб знать общую длину массива(удобно отслеживать расширение и сужение массива)
 
     public Contact get(int index) {
         return contacts[index];
     }
 
-    public void showContacts(){
+    private void sortContacts(){                                 // переименовать метод чтоб это было сортировкой
         Contact[] temp = contacts;
 
         for (int j = contactCount; j != 0; j--) {
@@ -94,4 +95,5 @@ public class ContactList {
             }
         }
     }
+
 }
